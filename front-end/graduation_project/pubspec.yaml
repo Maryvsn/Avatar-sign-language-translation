@@ -1,0 +1,24 @@
+name: graduation_project
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.3.0
+  speech_to_text: ^7.3.0
+  camera: ^0.11.0+2
+  google_sign_in: ^6.2.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/welcome_page.jpg

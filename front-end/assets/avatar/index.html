@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>VRM Avatar</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f0e6ff 0%, #e8d5ff 50%, #dfc5ff 100%);
+        }
+        #canvas-container { width: 100vw; height: 100vh; display: block; }
+        #loading {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            color: #7C3AED; font-family: 'Segoe UI', sans-serif;
+            font-weight: bold; font-size: 1.1rem; text-align: center;
+        }
+    </style>
+    <!-- NO Kalidokit. Pure math only. -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/",
+            "@pixiv/three-vrm": "https://cdn.jsdelivr.net/npm/@pixiv/three-vrm@3/lib/three-vrm.module.min.js"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div id="loading">Loading Avatar...</div>
+    <div id="canvas-container"></div>
+    <script>
+        // Force reload script.js — bypass WebView cache
+        const s = document.createElement('script');
+        s.type = 'module';
+        s.src = 'script.js?t=' + Date.now();
+        document.body.appendChild(s);
+    </script>
+</body>
+</html>
